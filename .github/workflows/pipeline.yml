@@ -1,0 +1,190 @@
+name: Gated DevSecOps pipeline
+'on':
+  push:
+    branches:
+    - main
+    - assignment/**
+    - exercise/**
+    paths-ignore:
+    - '**/*.md'
+    - evidence/**
+  pull_request:
+    branches:
+    - main
+  workflow_dispatch: {}
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+defaults:
+  run:
+    shell: bash
+jobs:
+  test:
+    name: Build and test
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        fetch-depth: 0
+        persist-credentials: false
+    - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e
+      with:
+        go-version-file: go.mod
+        cache: false
+    - name: Compile, vet and test with race detection
+      run: |-
+        mkdir -p reports build
+        go mod download
+        go build -trimpath -o build/server ./cmd/server
+        go vet ./...
+        go test -race -v -coverprofile=reports/coverage.out ./... | tee reports/tests.txt
+    - name: Save test-results
+      if: always()
+      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+      with:
+        name: test-results
+        path: reports/
+        if-no-files-found: error
+        retention-days: 14
+  security:
+    name: SAST, SCA and secret gates
+    needs: test
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        fetch-depth: 0
+        persist-credentials: false
+    - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e
+      with:
+        go-version-file: go.mod
+        cache: false
+    - name: Install pinned scanners
+      run: |-
+        python3 scripts/install-tools.py gosec gitleaks
+        echo "$PWD/.tools/bin" >> "$GITHUB_PATH"
+        GOBIN="$PWD/.tools/bin" go install golang.org/x/vuln/cmd/govulncheck@v1.8.0
+    - name: SAST — reject medium and high findings
+      run: |-
+        mkdir -p reports
+        gosec -severity medium -confidence medium -fmt json -out reports/gosec.json ./...
+    - name: SCA — check module and standard-library dependencies
+      run: govulncheck -show verbose ./... | tee reports/govulncheck.txt
+    - name: Secret scan — inspect Git history
+      run: gitleaks git --redact --report-format json --report-path reports/gitleaks.json .
+    - name: Save security-reports
+      if: always()
+      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+      with:
+        name: security-reports
+        path: reports/
+        if-no-files-found: error
+        retention-days: 14
+  image:
+    name: Build and publish scanned image
+    needs:
+    - test
+    - security
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      packages: write
+    env:
+      IMAGE: ghcr.io/${{ github.repository }}:sha-${{ github.sha }}
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        fetch-depth: 0
+        persist-credentials: false
+    - name: Build the non-root image
+      run: |-
+        mkdir -p reports
+        docker build --build-arg VERSION="$GITHUB_SHA" -t "$IMAGE" .
+        docker inspect "$IMAGE" > reports/image.json
+    - name: Install the pinned image scanner
+      run: |-
+        python3 scripts/install-tools.py trivy
+        echo "$PWD/.tools/bin" >> "$GITHUB_PATH"
+    - name: Container image gate — reject HIGH and CRITICAL
+      run: trivy image --scanners vuln --severity HIGH,CRITICAL --exit-code 1 --format json --output reports/trivy.json "$IMAGE"
+    - name: Publish the scanned image to GHCR
+      if: github.event_name == 'push' && !startsWith(github.ref, 'refs/heads/exercise/')
+      env:
+        REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |-
+        printf '%s' "$REGISTRY_TOKEN" | docker login ghcr.io -u "$GITHUB_ACTOR" --password-stdin
+        docker push "$IMAGE" | tee reports/registry-push.txt
+        docker inspect --format='{{json .RepoDigests}}' "$IMAGE" | tee reports/registry-digests.json
+    - name: Log out of the registry
+      if: always()
+      run: docker logout ghcr.io
+    - name: Save the deployable image
+      run: docker save "$IMAGE" -o image.tar
+    - name: Save container-image
+      if: success()
+      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+      with:
+        name: container-image
+        path: image.tar
+        if-no-files-found: error
+        retention-days: 14
+    - name: Save image-reports
+      if: always()
+      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+      with:
+        name: image-reports
+        path: reports/
+        if-no-files-found: error
+        retention-days: 14
+  deploy:
+    name: Deploy to temporary Kubernetes
+    needs: image
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    permissions:
+      contents: read
+      packages: read
+    env:
+      IMAGE: ghcr.io/${{ github.repository }}:sha-${{ github.sha }}
+      EXPECTED_VERSION: ${{ github.sha }}
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        fetch-depth: 0
+        persist-credentials: false
+    - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+      with:
+        name: container-image
+        path: .
+    - name: Install pinned Kubernetes tools
+      run: python3 scripts/install-tools.py kind kubectl
+    - name: Load the verified build artifact
+      run: docker load -i image.tar
+    - name: Retrieve the published image from GHCR
+      if: github.event_name == 'push' && !startsWith(github.ref, 'refs/heads/exercise/')
+      env:
+        REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |-
+        printf '%s' "$REGISTRY_TOKEN" | docker login ghcr.io -u "$GITHUB_ACTOR" --password-stdin
+        mkdir -p reports
+        docker pull "$IMAGE" | tee reports/registry-pull.txt
+        docker logout ghcr.io
+    - name: Deploy, verify application behavior and clean up
+      run: bash scripts/deploy.sh "$IMAGE"
+    - name: Ensure the temporary cluster is deleted
+      if: always()
+      run: if [[ -x .tools/bin/kind ]]; then .tools/bin/kind delete cluster --name "assignment-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}";
+        fi
+    - name: Save deployment-evidence
+      if: always()
+      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+      with:
+        name: deployment-evidence
+        path: reports/
+        if-no-files-found: error
+        retention-days: 14
