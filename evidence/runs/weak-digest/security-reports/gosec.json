@@ -1,0 +1,44 @@
+{
+	"Golang errors": {},
+	"Issues": [
+		{
+			"severity": "MEDIUM",
+			"confidence": "HIGH",
+			"cwe": {
+				"id": "328",
+				"url": "https://cwe.mitre.org/data/definitions/328.html"
+			},
+			"rule_id": "G401",
+			"details": "Use of weak cryptographic primitive",
+			"file": "/home/runner/work/devops-devsecops-demo/devops-devsecops-demo/internal/api/legacy.go",
+			"code": "6: func legacyFingerprint(value []byte) [16]byte {\n7: \treturn md5.Sum(value)\n8: }\n",
+			"line": "7",
+			"column": "9",
+			"nosec": false,
+			"suppressions": null
+		},
+		{
+			"severity": "MEDIUM",
+			"confidence": "HIGH",
+			"cwe": {
+				"id": "327",
+				"url": "https://cwe.mitre.org/data/definitions/327.html"
+			},
+			"rule_id": "G501",
+			"details": "Blocklisted import crypto/md5: weak cryptographic primitive",
+			"file": "/home/runner/work/devops-devsecops-demo/devops-devsecops-demo/internal/api/legacy.go",
+			"code": "2: \n3: import \"crypto/md5\"\n4: \n",
+			"line": "3",
+			"column": "8",
+			"nosec": false,
+			"suppressions": null
+		}
+	],
+	"Stats": {
+		"files": 4,
+		"lines": 203,
+		"nosec": 0,
+		"found": 2
+	},
+	"GosecVersion": "2.29.0"
+}

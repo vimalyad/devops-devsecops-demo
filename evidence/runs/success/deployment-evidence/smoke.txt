@@ -1,0 +1,9 @@
+GET /healthz 200 {"status": "ok"}
+GET / 200 {"application": "Release Catalog", "storage": "in-memory, single replica", "student": "Vimal Kumar Yadav", "version": "7f521b7dfc61f65934565c868cff408fb6f0a489"}
+POST /api/releases 201 {"id": "658d09a6-228a-49b1-a730-8133dc957ca0", "service": "catalog", "version": "1.0.0", "environment": "staging"}
+GET /api/releases/658d09a6-228a-49b1-a730-8133dc957ca0 200 {"id": "658d09a6-228a-49b1-a730-8133dc957ca0", "service": "catalog", "version": "1.0.0", "environment": "staging"}
+GET /api/releases 200 [{"id": "658d09a6-228a-49b1-a730-8133dc957ca0", "service": "catalog", "version": "1.0.0", "environment": "staging"}]
+PUT /api/releases/658d09a6-228a-49b1-a730-8133dc957ca0 200 {"id": "658d09a6-228a-49b1-a730-8133dc957ca0", "service": "catalog", "version": "2.0.0", "environment": "staging"}
+DELETE /api/releases/658d09a6-228a-49b1-a730-8133dc957ca0 204 null
+GET /api/releases/658d09a6-228a-49b1-a730-8133dc957ca0 404 {"error": "release not found"}
+PASS: create, read, list, update and delete through the Kubernetes Service

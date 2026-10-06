@@ -76,6 +76,6 @@ Test reports, security reports, the container image and deployment evidence are 
 
 ## Execution evidence
 
-Successful pipeline runs, an intentional blocked security exercise and screenshots will be recorded in `evidence/README.md` after execution. Scan results describe the database and code at run time; later database updates can correctly cause a new run to fail.
+[Execution evidence](evidence/README.md) includes successful publication/deployment, a blocked security exercise, the corrected run, retained reports and terminal-only screenshots. Scan results describe the database and code at run time; later database updates can correctly cause a new run to fail.
 
 The scope follows the [session 17 homework](https://docs.google.com/document/d/1cjXFYf2Thm8cBEN-0C48B-v02cj3jGLd47lcO18prHE/edit). Tool references: [gosec](https://github.com/securego/gosec), [govulncheck](https://pkg.go.dev/golang.org/x/vuln/cmd/govulncheck), [Gitleaks](https://github.com/gitleaks/gitleaks), [Trivy vulnerability scanning](https://trivy.dev/docs/latest/scanner/vulnerability/), and [GHCR publication with Actions](https://docs.github.com/en/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions).

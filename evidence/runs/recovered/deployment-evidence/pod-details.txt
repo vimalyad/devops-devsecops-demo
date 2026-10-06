@@ -1,0 +1,56 @@
+Name:             assignment-7b9c4cdc99-4k7rv
+Namespace:        assignment
+Priority:         0
+Service Account:  default
+Node:             assignment-37519400322-1-control-plane/172.18.0.2
+Start Time:       Tue, 06 Oct 2026 19:33:10 +0000
+Labels:           app=assignment
+                  pod-template-hash=7b9c4cdc99
+Annotations:      <none>
+Status:           Running
+SeccompProfile:   RuntimeDefault
+IP:               10.244.0.5
+IPs:
+  IP:           10.244.0.5
+Controlled By:  ReplicaSet/assignment-7b9c4cdc99
+Containers:
+  api:
+    Container ID:   containerd://0fae51da705044d21e1253a6015b76e13bde2ada37c1d09d93601f5e203b681e
+    Image:          ghcr.io/vimalyad/devops-devsecops-demo:sha-97c7550a351cc46623c589e5a4ca740e7fe26943
+    Image ID:       docker.io/library/import-2026-10-06@sha256:84010a414e675fd6ab3df2dbe056d7f1901d66b771ff5b4d6d3bf7575b42f86b
+    Port:           8080/TCP (http)
+    Host Port:      0/TCP (http)
+    State:          Running
+      Started:      Tue, 06 Oct 2026 19:33:11 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     250m
+      memory:  64Mi
+    Requests:
+      cpu:        50m
+      memory:     16Mi
+    Liveness:     http-get http://:http/healthz delay=0s timeout=1s period=10s successThreshold=1 failureThreshold=3
+    Readiness:    http-get http://:http/healthz delay=0s timeout=1s period=3s successThreshold=1 failureThreshold=3
+    Startup:      http-get http://:http/healthz delay=0s timeout=1s period=2s successThreshold=1 failureThreshold=30
+    Environment:  <none>
+    Mounts:       <none>
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:                      <none>
+QoS Class:                    Burstable
+Node-Selectors:               <none>
+Tolerations:                  node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                              node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  4s    default-scheduler  Successfully assigned assignment/assignment-7b9c4cdc99-4k7rv to assignment-37519400322-1-control-plane
+  Normal  Pulled     4s    kubelet            spec.containers{api}: Container image "ghcr.io/vimalyad/devops-devsecops-demo:sha-97c7550a351cc46623c589e5a4ca740e7fe26943" already present on machine and can be accessed by the pod
+  Normal  Created    4s    kubelet            spec.containers{api}: Container created
+  Normal  Started    3s    kubelet            spec.containers{api}: Container started

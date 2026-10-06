@@ -1,0 +1,582 @@
+Build and test	Set up job	﻿2026-10-06T19:23:03.4890955Z Current runner version: '2.337.0'
+Build and test	Set up job	2026-10-06T19:23:03.4914472Z ##[group]Runner Image Provisioner
+Build and test	Set up job	2026-10-06T19:23:03.4915254Z Hosted Compute Agent
+Build and test	Set up job	2026-10-06T19:23:03.4915842Z Version: 20260901.588
+Build and test	Set up job	2026-10-06T19:23:03.4916354Z Commit: f88ec8081b781fac6c440065ac7ff9e710ce3d0b
+Build and test	Set up job	2026-10-06T19:23:03.4917002Z Build Date: 2026-09-01T19:56:44Z
+Build and test	Set up job	2026-10-06T19:23:03.4917605Z Worker ID: {b2690eba-16a8-4b82-b9f4-55b5e2467fce}
+Build and test	Set up job	2026-10-06T19:23:03.4918212Z Azure Region: westus
+Build and test	Set up job	2026-10-06T19:23:03.4918737Z ##[endgroup]
+Build and test	Set up job	2026-10-06T19:23:03.4920255Z ##[group]Operating System
+Build and test	Set up job	2026-10-06T19:23:03.4920836Z Ubuntu
+Build and test	Set up job	2026-10-06T19:23:03.4921281Z 24.04.5
+Build and test	Set up job	2026-10-06T19:23:03.4921733Z LTS
+Build and test	Set up job	2026-10-06T19:23:03.4922200Z ##[endgroup]
+Build and test	Set up job	2026-10-06T19:23:03.4922657Z ##[group]Runner Image
+Build and test	Set up job	2026-10-06T19:23:03.4923203Z Image: ubuntu-24.04
+Build and test	Set up job	2026-10-06T19:23:03.4923785Z Version: 20260927.320.1
+Build and test	Set up job	2026-10-06T19:23:03.4924667Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260927.320/images/ubuntu/Ubuntu2404-Readme.md
+Build and test	Set up job	2026-10-06T19:23:03.4926101Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260927.320
+Build and test	Set up job	2026-10-06T19:23:03.4926943Z ##[endgroup]
+Build and test	Set up job	2026-10-06T19:23:03.4927861Z ##[group]GITHUB_TOKEN Permissions
+Build and test	Set up job	2026-10-06T19:23:03.4930127Z Contents: read
+Build and test	Set up job	2026-10-06T19:23:03.4930653Z Metadata: read
+Build and test	Set up job	2026-10-06T19:23:03.4931122Z ##[endgroup]
+Build and test	Set up job	2026-10-06T19:23:03.4932998Z Secret source: Actions
+Build and test	Set up job	2026-10-06T19:23:03.4933822Z Cache mode: write
+Build and test	Set up job	2026-10-06T19:23:03.4934576Z Prepare workflow directory
+Build and test	Set up job	2026-10-06T19:23:03.5259471Z Prepare all required actions
+Build and test	Set up job	2026-10-06T19:23:03.5300255Z Getting action download info
+Build and test	Set up job	2026-10-06T19:23:03.9612056Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+Build and test	Set up job	2026-10-06T19:23:04.0646250Z Download action repository 'actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e' (SHA:b7ad1dad31e06c5925ef5d2fc7ad053ef454303e)
+Build and test	Set up job	2026-10-06T19:23:04.5352789Z Download action repository 'actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a' (SHA:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a)
+Build and test	Set up job	2026-10-06T19:23:04.7866496Z Complete job name: Build and test
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	﻿2026-10-06T19:23:04.8609734Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:04.8611261Z with:
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:04.8611956Z   fetch-depth: 0
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:04.8612714Z   persist-credentials: false
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:04.8613622Z   repository: vimalyad/devops-devsecops-demo
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:04.8620483Z   token: ***
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:04.8621190Z   ssh-strict: true
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:04.8622114Z   ssh-user: git
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:04.8622834Z   clean: true
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:04.8623585Z   sparse-checkout-cone-mode: true
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:04.8624458Z   fetch-tags: false
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:04.8625193Z   show-progress: true
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:04.8625947Z   lfs: false
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:04.8626657Z   submodules: false
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:04.8627405Z   set-safe-directory: true
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:04.8628245Z   allow-unsafe-pr-checkout: false
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:04.8629532Z ##[endgroup]
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:04.9511108Z Syncing repository: vimalyad/devops-devsecops-demo
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:04.9513799Z ##[group]Getting Git version info
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:04.9515293Z Working directory is '/home/runner/work/devops-devsecops-demo/devops-devsecops-demo'
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:04.9517393Z [command]/usr/bin/git version
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.0312861Z git version 2.55.0
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.0329911Z ##[endgroup]
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.0338704Z Temporarily overriding HOME='/home/runner/work/_temp/4941b8a4-01fc-49fa-8550-7b06f68220b9' before making global git config changes
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.0341291Z Adding repository directory to the temporary git global config as a safe directory
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.0344505Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/devops-devsecops-demo/devops-devsecops-demo
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.0388905Z Deleting the contents of '/home/runner/work/devops-devsecops-demo/devops-devsecops-demo'
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.0392279Z ##[group]Determining repository object format
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.0394888Z ##[endgroup]
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.0396682Z ##[group]Initializing the repository
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.0398120Z [command]/usr/bin/git init /home/runner/work/devops-devsecops-demo/devops-devsecops-demo
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.0476351Z hint: Using 'master' as the name for the initial branch. This default branch name
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.0478764Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.0480832Z hint: to use in all of your new repositories, which will suppress this warning,
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.0482052Z hint: call:
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.0482730Z hint:
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.0483561Z hint: 	git config --global init.defaultBranch <name>
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.0484564Z hint:
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.0485950Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.0487604Z hint: 'development'. The just-created branch can be renamed via this command:
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.0488815Z hint:
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.0489824Z hint: 	git branch -m <name>
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.0490926Z hint:
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.0491964Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.0494076Z Initialized empty Git repository in /home/runner/work/devops-devsecops-demo/devops-devsecops-demo/.git/
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.0497034Z [command]/usr/bin/git remote add origin https://github.com/vimalyad/devops-devsecops-demo
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.0531356Z ##[endgroup]
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.0532669Z ##[group]Disabling automatic garbage collection
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.0533911Z [command]/usr/bin/git config --local gc.auto 0
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.0563179Z ##[endgroup]
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.0564405Z ##[group]Setting up auth
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.0565277Z Removing SSH command configuration
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.0567108Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.0595890Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.0873049Z Removing HTTP extra header
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.0877220Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.0909425Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.1102118Z Removing includeIf entries pointing to credentials config files
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.1103714Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.1132222Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.1326312Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-8a056cff-a737-471d-8c5a-b63a65e7e15c.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.1360981Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/devops-devsecops-demo/devops-devsecops-demo/.git.path /home/runner/work/_temp/git-credentials-8a056cff-a737-471d-8c5a-b63a65e7e15c.config
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.1389736Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/devops-devsecops-demo/devops-devsecops-demo/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-8a056cff-a737-471d-8c5a-b63a65e7e15c.config
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.1431592Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-8a056cff-a737-471d-8c5a-b63a65e7e15c.config
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.1463123Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-8a056cff-a737-471d-8c5a-b63a65e7e15c.config
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.1489900Z ##[endgroup]
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.1491378Z ##[group]Fetching the repository
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.1496321Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.6793609Z From https://github.com/vimalyad/devops-devsecops-demo
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.6796286Z  * [new branch]      assignment/complete-pipeline -> origin/assignment/complete-pipeline
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.6797878Z  * [new branch]      exercise/weak-digest -> origin/exercise/weak-digest
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.6800275Z  * [new branch]      main                 -> origin/main
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.6806655Z [command]/usr/bin/git branch --list --remote origin/exercise/weak-digest
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.6833278Z   origin/exercise/weak-digest
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.6841985Z [command]/usr/bin/git rev-parse refs/remotes/origin/exercise/weak-digest
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.6869967Z 3b7cc3743e7ed800f841910160155018067996c9
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.6878642Z ##[endgroup]
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.6880222Z ##[group]Determining the checkout info
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.6881495Z ##[endgroup]
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.6890196Z [command]/usr/bin/git sparse-checkout disable
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.6937956Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.7048719Z ##[group]Checking out the ref
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.7061887Z [command]/usr/bin/git checkout --progress --force -B exercise/weak-digest refs/remotes/origin/exercise/weak-digest
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.7327575Z Switched to a new branch 'exercise/weak-digest'
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.7333026Z branch 'exercise/weak-digest' set up to track 'origin/exercise/weak-digest'.
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.7362557Z ##[endgroup]
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.7486505Z [command]/usr/bin/git log -1 --format=%H
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.7542168Z 3b7cc3743e7ed800f841910160155018067996c9
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.7554872Z ##[group]Removing auth
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.7556192Z Removing SSH command configuration
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.7560327Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.7607578Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.7857896Z Removing HTTP extra header
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.7860943Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.7912332Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.8158106Z Removing includeIf entries pointing to credentials config files
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.8160924Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.8194753Z includeif.gitdir:/home/runner/work/devops-devsecops-demo/devops-devsecops-demo/.git.path
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.8197846Z includeif.gitdir:/home/runner/work/devops-devsecops-demo/devops-devsecops-demo/.git/worktrees/*.path
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.8200347Z includeif.gitdir:/github/workspace/.git.path
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.8201926Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.8205727Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/devops-devsecops-demo/devops-devsecops-demo/.git.path
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.8235011Z /home/runner/work/_temp/git-credentials-8a056cff-a737-471d-8c5a-b63a65e7e15c.config
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.8246515Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/devops-devsecops-demo/devops-devsecops-demo/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-8a056cff\-a737\-471d\-8c5a\-b63a65e7e15c\.config
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.8289434Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/devops-devsecops-demo/devops-devsecops-demo/.git/worktrees/*.path
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.8314631Z /home/runner/work/_temp/git-credentials-8a056cff-a737-471d-8c5a-b63a65e7e15c.config
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.8332444Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/devops-devsecops-demo/devops-devsecops-demo/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-8a056cff\-a737\-471d\-8c5a\-b63a65e7e15c\.config
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.8360890Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.8411111Z /github/runner_temp/git-credentials-8a056cff-a737-471d-8c5a-b63a65e7e15c.config
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.8420377Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-8a056cff\-a737\-471d\-8c5a\-b63a65e7e15c\.config
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.8466688Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.8493807Z /github/runner_temp/git-credentials-8a056cff-a737-471d-8c5a-b63a65e7e15c.config
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.8501811Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-8a056cff\-a737\-471d\-8c5a\-b63a65e7e15c\.config
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.8540300Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.8783002Z Removing credentials config '/home/runner/work/_temp/git-credentials-8a056cff-a737-471d-8c5a-b63a65e7e15c.config'
+Build and test	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:05.8791459Z ##[endgroup]
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	﻿2026-10-06T19:23:05.9137298Z ##[group]Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:05.9139373Z with:
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:05.9140258Z   go-version-file: go.mod
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:05.9141231Z   cache: false
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:05.9142112Z   check-latest: false
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:05.9152313Z   token: ***
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:05.9153301Z ##[endgroup]
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:06.0200668Z Setup go version spec 1.27.1
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:06.0207778Z Attempting to download 1.27.1...
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:06.7483426Z matching 1.27.1...
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:06.7543567Z Acquiring 1.27.1 from https://github.com/actions/go-versions/releases/download/1.27.1-33583469715/go-1.27.1-linux-x64.tar.gz
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:07.2059294Z Extracting Go...
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:07.2147380Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/68e7cdf9-4a81-4d45-855d-c4aecd2c3336 -f /home/runner/work/_temp/854e875b-0405-4e6d-92e7-6f9e2c16b157
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:08.6570438Z Successfully extracted go to /home/runner/work/_temp/68e7cdf9-4a81-4d45-855d-c4aecd2c3336
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:08.6571427Z Adding to the cache ...
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.4023574Z Successfully cached go to /opt/hostedtoolcache/go/1.27.1/x64
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.4024391Z Added go to the path
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.4029698Z Successfully set up Go version 1.27.1
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.4212913Z go version go1.27.1 linux/amd64
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.4213182Z 
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.4213468Z ##[group]go env
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5346371Z AR='ar'
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5346777Z CC='gcc'
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5347037Z CGO_CFLAGS='-O2 -g'
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5347316Z CGO_CPPFLAGS=''
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5347551Z CGO_CXXFLAGS='-O2 -g'
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5347771Z CGO_ENABLED='1'
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5347975Z CGO_FFLAGS='-O2 -g'
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5348161Z CGO_LDFLAGS='-O2 -g'
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5348354Z CXX='g++'
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5348532Z GCCGO='gccgo'
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5348722Z GO111MODULE=''
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5348898Z GOAMD64='v1'
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5349070Z GOARCH='amd64'
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5349517Z GOAUTH='netrc'
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5349704Z GOBIN='/home/runner/go/bin'
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5349946Z GOCACHE='/home/runner/.cache/go-build'
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5350222Z GOCACHEPROG=''
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5350450Z GODEBUG=''
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5350661Z GOENV='/home/runner/.config/go/env'
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5350940Z GOEXE=''
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5351124Z GOEXPERIMENT=''
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5351312Z GOFIPS140='off'
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5351936Z GOFLAGS=''
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5352472Z GOGCCFLAGS='-fPIC -m64 -pthread -Wl,--no-gc-sections -fmessage-length=0 -ffile-prefix-map=/tmp/go-build2826430354=/tmp/go-build -gno-record-gcc-switches'
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5353033Z GOHOSTARCH='amd64'
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5353226Z GOHOSTOS='linux'
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5353412Z GOINSECURE=''
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5353763Z GOMOD='/home/runner/work/devops-devsecops-demo/devops-devsecops-demo/go.mod'
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5354112Z GOMODCACHE='/home/runner/go/pkg/mod'
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5354338Z GONOPROXY=''
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5354516Z GONOSUMDB=''
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5354717Z GOOS='linux'
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5354949Z GOPACKAGESDRIVER=''
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5355153Z GOPATH='/home/runner/go'
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5355354Z GOPRIVATE=''
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5355584Z GOPROXY='https://proxy.golang.org,direct'
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5355880Z GOROOT='/opt/hostedtoolcache/go/1.27.1/x64'
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5356131Z GOSUMDB='sum.golang.org'
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5356341Z GOTELEMETRY='local'
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5356570Z GOTELEMETRYDIR='/home/runner/.config/go/telemetry'
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5356826Z GOTMPDIR=''
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5357003Z GOTOOLCHAIN='local'
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5357276Z GOTOOLDIR='/opt/hostedtoolcache/go/1.27.1/x64/pkg/tool/linux_amd64'
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5357564Z GOVCS=''
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5357740Z GOVERSION='go1.27.1'
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5357927Z GOWORK=''
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5358116Z PKG_CONFIG='pkg-config'
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5358242Z 
+Build and test	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:23:15.5358672Z ##[endgroup]
+Build and test	Compile, vet and test with race detection	﻿2026-10-06T19:23:15.5531870Z ##[group]Run mkdir -p reports build
+Build and test	Compile, vet and test with race detection	2026-10-06T19:23:15.5532226Z ^[[36;1mmkdir -p reports build^[[0m
+Build and test	Compile, vet and test with race detection	2026-10-06T19:23:15.5532453Z ^[[36;1mgo mod download^[[0m
+Build and test	Compile, vet and test with race detection	2026-10-06T19:23:15.5532731Z ^[[36;1mgo build -trimpath -o build/server ./cmd/server^[[0m
+Build and test	Compile, vet and test with race detection	2026-10-06T19:23:15.5533005Z ^[[36;1mgo vet ./...^[[0m
+Build and test	Compile, vet and test with race detection	2026-10-06T19:23:15.5533342Z ^[[36;1mgo test -race -v -coverprofile=reports/coverage.out ./... | tee reports/tests.txt^[[0m
+Build and test	Compile, vet and test with race detection	2026-10-06T19:23:15.5745455Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Build and test	Compile, vet and test with race detection	2026-10-06T19:23:15.5745823Z env:
+Build and test	Compile, vet and test with race detection	2026-10-06T19:23:15.5746009Z   GOTOOLCHAIN: local
+Build and test	Compile, vet and test with race detection	2026-10-06T19:23:15.5746198Z ##[endgroup]
+Build and test	Compile, vet and test with race detection	2026-10-06T19:23:53.0811837Z 	github.com/vimalyad/devops-devsecops-demo/cmd/server		coverage: 0.0% of statements
+Build and test	Compile, vet and test with race detection	2026-10-06T19:23:53.9439692Z === RUN   TestReleaseLifecycle
+Build and test	Compile, vet and test with race detection	2026-10-06T19:23:53.9440283Z --- PASS: TestReleaseLifecycle (0.00s)
+Build and test	Compile, vet and test with race detection	2026-10-06T19:23:53.9440616Z === RUN   TestValidation
+Build and test	Compile, vet and test with race detection	2026-10-06T19:23:53.9440877Z --- PASS: TestValidation (0.00s)
+Build and test	Compile, vet and test with race detection	2026-10-06T19:23:53.9441155Z === RUN   TestMalformedJSON
+Build and test	Compile, vet and test with race detection	2026-10-06T19:23:53.9441535Z --- PASS: TestMalformedJSON (0.00s)
+Build and test	Compile, vet and test with race detection	2026-10-06T19:23:53.9441827Z === RUN   TestMissingRelease
+Build and test	Compile, vet and test with race detection	2026-10-06T19:23:53.9442111Z --- PASS: TestMissingRelease (0.00s)
+Build and test	Compile, vet and test with race detection	2026-10-06T19:23:53.9442439Z === RUN   TestEmptyListAndHealth
+Build and test	Compile, vet and test with race detection	2026-10-06T19:23:53.9442747Z --- PASS: TestEmptyListAndHealth (0.00s)
+Build and test	Compile, vet and test with race detection	2026-10-06T19:23:53.9443061Z === RUN   TestConcurrentCreates
+Build and test	Compile, vet and test with race detection	2026-10-06T19:23:53.9443351Z --- PASS: TestConcurrentCreates (0.00s)
+Build and test	Compile, vet and test with race detection	2026-10-06T19:23:53.9443647Z PASS
+Build and test	Compile, vet and test with race detection	2026-10-06T19:23:53.9443880Z coverage: 91.8% of statements
+Build and test	Compile, vet and test with race detection	2026-10-06T19:23:53.9444283Z ok  	github.com/vimalyad/devops-devsecops-demo/internal/api	1.013s	coverage: 91.8% of statements
+Build and test	Save test-results	﻿2026-10-06T19:23:54.0045055Z ##[group]Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+Build and test	Save test-results	2026-10-06T19:23:54.0045391Z with:
+Build and test	Save test-results	2026-10-06T19:23:54.0045559Z   name: test-results
+Build and test	Save test-results	2026-10-06T19:23:54.0045738Z   path: reports/
+Build and test	Save test-results	2026-10-06T19:23:54.0045912Z   if-no-files-found: error
+Build and test	Save test-results	2026-10-06T19:23:54.0046101Z   retention-days: 14
+Build and test	Save test-results	2026-10-06T19:23:54.0046272Z   compression-level: 6
+Build and test	Save test-results	2026-10-06T19:23:54.0046450Z   overwrite: false
+Build and test	Save test-results	2026-10-06T19:23:54.0046623Z   include-hidden-files: false
+Build and test	Save test-results	2026-10-06T19:23:54.0046811Z   archive: true
+Build and test	Save test-results	2026-10-06T19:23:54.0046964Z env:
+Build and test	Save test-results	2026-10-06T19:23:54.0047119Z   GOTOOLCHAIN: local
+Build and test	Save test-results	2026-10-06T19:23:54.0047287Z ##[endgroup]
+Build and test	Save test-results	2026-10-06T19:23:54.1187338Z With the provided path, there will be 2 files uploaded
+Build and test	Save test-results	2026-10-06T19:23:54.1191772Z Artifact name is valid!
+Build and test	Save test-results	2026-10-06T19:23:54.1192177Z Root directory input is valid!
+Build and test	Save test-results	2026-10-06T19:23:54.5034982Z Uploading artifact: test-results.zip
+Build and test	Save test-results	2026-10-06T19:23:54.5068632Z Beginning upload of artifact content to blob storage
+Build and test	Save test-results	2026-10-06T19:23:54.8040976Z Uploaded bytes 979
+Build and test	Save test-results	2026-10-06T19:23:54.8742087Z Finished uploading artifact content to blob storage!
+Build and test	Save test-results	2026-10-06T19:23:54.8742888Z SHA256 digest of uploaded artifact is eed66d72e00e3aa9514f3b9e2399b4b97e3a5c69e4969a567ea1415e7999e197
+Build and test	Save test-results	2026-10-06T19:23:54.8743451Z Finalizing artifact upload
+Build and test	Save test-results	2026-10-06T19:23:55.3835591Z Artifact test-results successfully finalized. Artifact ID 11438785824
+Build and test	Save test-results	2026-10-06T19:23:55.3836379Z Artifact test-results has been successfully uploaded! Final size is 979 bytes. Artifact ID is 11438785824
+Build and test	Save test-results	2026-10-06T19:23:55.3839061Z Artifact download URL: https://github.com/vimalyad/devops-devsecops-demo/actions/runs/37518538012/artifacts/11438785824
+Build and test	Post Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	﻿2026-10-06T19:23:55.3980566Z Post job cleanup.
+Build and test	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	﻿2026-10-06T19:23:55.5094313Z Post job cleanup.
+Build and test	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:55.5823253Z [command]/usr/bin/git version
+Build and test	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:55.5868255Z git version 2.55.0
+Build and test	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:55.5897795Z Temporarily overriding HOME='/home/runner/work/_temp/980ca882-18c8-4975-9a64-3a3ed2f25b9a' before making global git config changes
+Build and test	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:55.5899078Z Adding repository directory to the temporary git global config as a safe directory
+Build and test	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:55.5903347Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/devops-devsecops-demo/devops-devsecops-demo
+Build and test	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:55.5950629Z Removing SSH command configuration
+Build and test	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:55.5955102Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Build and test	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:55.5981437Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Build and test	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:55.6203302Z Removing HTTP extra header
+Build and test	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:55.6209035Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Build and test	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:55.6241411Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Build and test	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:55.6481956Z Removing includeIf entries pointing to credentials config files
+Build and test	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:55.6482973Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Build and test	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:23:55.6502298Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Build and test	Complete job	﻿2026-10-06T19:23:55.6872994Z Cleaning up orphan processes
+SAST, SCA and secret gates	Set up job	﻿2026-10-06T19:24:03.9169042Z Current runner version: '2.337.0'
+SAST, SCA and secret gates	Set up job	2026-10-06T19:24:03.9195606Z ##[group]Runner Image Provisioner
+SAST, SCA and secret gates	Set up job	2026-10-06T19:24:03.9196583Z Hosted Compute Agent
+SAST, SCA and secret gates	Set up job	2026-10-06T19:24:03.9197220Z Version: 20260901.588
+SAST, SCA and secret gates	Set up job	2026-10-06T19:24:03.9197944Z Commit: f88ec8081b781fac6c440065ac7ff9e710ce3d0b
+SAST, SCA and secret gates	Set up job	2026-10-06T19:24:03.9198799Z Build Date: 2026-09-01T19:56:44Z
+SAST, SCA and secret gates	Set up job	2026-10-06T19:24:03.9199558Z Worker ID: {6af2ce89-5f25-46b0-931f-25b9b183a5c3}
+SAST, SCA and secret gates	Set up job	2026-10-06T19:24:03.9200347Z Azure Region: westcentralus
+SAST, SCA and secret gates	Set up job	2026-10-06T19:24:03.9200987Z ##[endgroup]
+SAST, SCA and secret gates	Set up job	2026-10-06T19:24:03.9203013Z ##[group]Operating System
+SAST, SCA and secret gates	Set up job	2026-10-06T19:24:03.9203792Z Ubuntu
+SAST, SCA and secret gates	Set up job	2026-10-06T19:24:03.9204339Z 24.04.5
+SAST, SCA and secret gates	Set up job	2026-10-06T19:24:03.9205023Z LTS
+SAST, SCA and secret gates	Set up job	2026-10-06T19:24:03.9205594Z ##[endgroup]
+SAST, SCA and secret gates	Set up job	2026-10-06T19:24:03.9206201Z ##[group]Runner Image
+SAST, SCA and secret gates	Set up job	2026-10-06T19:24:03.9206951Z Image: ubuntu-24.04
+SAST, SCA and secret gates	Set up job	2026-10-06T19:24:03.9207536Z Version: 20260927.320.1
+SAST, SCA and secret gates	Set up job	2026-10-06T19:24:03.9208678Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260927.320/images/ubuntu/Ubuntu2404-Readme.md
+SAST, SCA and secret gates	Set up job	2026-10-06T19:24:03.9210907Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260927.320
+SAST, SCA and secret gates	Set up job	2026-10-06T19:24:03.9211985Z ##[endgroup]
+SAST, SCA and secret gates	Set up job	2026-10-06T19:24:03.9213511Z ##[group]GITHUB_TOKEN Permissions
+SAST, SCA and secret gates	Set up job	2026-10-06T19:24:03.9216208Z Contents: read
+SAST, SCA and secret gates	Set up job	2026-10-06T19:24:03.9217342Z Metadata: read
+SAST, SCA and secret gates	Set up job	2026-10-06T19:24:03.9218596Z ##[endgroup]
+SAST, SCA and secret gates	Set up job	2026-10-06T19:24:03.9221869Z Secret source: Actions
+SAST, SCA and secret gates	Set up job	2026-10-06T19:24:03.9223892Z Cache mode: write
+SAST, SCA and secret gates	Set up job	2026-10-06T19:24:03.9225124Z Prepare workflow directory
+SAST, SCA and secret gates	Set up job	2026-10-06T19:24:03.9692018Z Prepare all required actions
+SAST, SCA and secret gates	Set up job	2026-10-06T19:24:03.9752612Z Getting action download info
+SAST, SCA and secret gates	Set up job	2026-10-06T19:24:04.3138200Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+SAST, SCA and secret gates	Set up job	2026-10-06T19:24:04.4173373Z Download action repository 'actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e' (SHA:b7ad1dad31e06c5925ef5d2fc7ad053ef454303e)
+SAST, SCA and secret gates	Set up job	2026-10-06T19:24:05.1642874Z Download action repository 'actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a' (SHA:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a)
+SAST, SCA and secret gates	Set up job	2026-10-06T19:24:05.3835904Z Complete job name: SAST, SCA and secret gates
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	﻿2026-10-06T19:24:05.4665303Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.4666513Z with:
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.4666997Z   fetch-depth: 0
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.4667508Z   persist-credentials: false
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.4668112Z   repository: vimalyad/devops-devsecops-demo
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.4672656Z   token: ***
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.4673158Z   ssh-strict: true
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.4673648Z   ssh-user: git
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.4674116Z   clean: true
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.4674593Z   sparse-checkout-cone-mode: true
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.4675166Z   fetch-tags: false
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.4675664Z   show-progress: true
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.4676164Z   lfs: false
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.4676636Z   submodules: false
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.4677139Z   set-safe-directory: true
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.4677698Z   allow-unsafe-pr-checkout: false
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.4678583Z ##[endgroup]
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.5712100Z Syncing repository: vimalyad/devops-devsecops-demo
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.5715363Z ##[group]Getting Git version info
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.5717133Z Working directory is '/home/runner/work/devops-devsecops-demo/devops-devsecops-demo'
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.5719318Z [command]/usr/bin/git version
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.5909107Z git version 2.55.0
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.5933166Z ##[endgroup]
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.5945009Z Temporarily overriding HOME='/home/runner/work/_temp/a15defaa-2a73-44ae-81b6-c679256b5fda' before making global git config changes
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.5947763Z Adding repository directory to the temporary git global config as a safe directory
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.5951863Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/devops-devsecops-demo/devops-devsecops-demo
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.6002345Z Deleting the contents of '/home/runner/work/devops-devsecops-demo/devops-devsecops-demo'
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.6006395Z ##[group]Determining repository object format
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.6008223Z ##[endgroup]
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.6009617Z ##[group]Initializing the repository
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.6012837Z [command]/usr/bin/git init /home/runner/work/devops-devsecops-demo/devops-devsecops-demo
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.6131479Z hint: Using 'master' as the name for the initial branch. This default branch name
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.6133616Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.6135441Z hint: to use in all of your new repositories, which will suppress this warning,
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.6137021Z hint: call:
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.6137921Z hint:
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.6139060Z hint: 	git config --global init.defaultBranch <name>
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.6140326Z hint:
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.6141530Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.6143795Z hint: 'development'. The just-created branch can be renamed via this command:
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.6145406Z hint:
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.6146249Z hint: 	git branch -m <name>
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.6147196Z hint:
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.6148518Z hint: Disable this message with "git config set advice.defaultBranchName false"
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.6151519Z Initialized empty Git repository in /home/runner/work/devops-devsecops-demo/devops-devsecops-demo/.git/
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.6156701Z [command]/usr/bin/git remote add origin https://github.com/vimalyad/devops-devsecops-demo
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.6212379Z ##[endgroup]
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.6214647Z ##[group]Disabling automatic garbage collection
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.6216548Z [command]/usr/bin/git config --local gc.auto 0
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.6258394Z ##[endgroup]
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.6260281Z ##[group]Setting up auth
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.6261782Z Removing SSH command configuration
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.6265941Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.6306782Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.6671714Z Removing HTTP extra header
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.6677854Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.6713959Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.6936978Z Removing includeIf entries pointing to credentials config files
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.6940757Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.6980649Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.7217085Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-6bf51d68-eef2-43af-b5f1-bff75da3a0c6.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.7259695Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/devops-devsecops-demo/devops-devsecops-demo/.git.path /home/runner/work/_temp/git-credentials-6bf51d68-eef2-43af-b5f1-bff75da3a0c6.config
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.7297592Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/devops-devsecops-demo/devops-devsecops-demo/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-6bf51d68-eef2-43af-b5f1-bff75da3a0c6.config
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.7336835Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-6bf51d68-eef2-43af-b5f1-bff75da3a0c6.config
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.7373745Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-6bf51d68-eef2-43af-b5f1-bff75da3a0c6.config
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.7405269Z ##[endgroup]
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.7406119Z ##[group]Fetching the repository
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:05.7413544Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.2395909Z From https://github.com/vimalyad/devops-devsecops-demo
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.2397234Z  * [new branch]      assignment/complete-pipeline -> origin/assignment/complete-pipeline
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.2398488Z  * [new branch]      exercise/weak-digest -> origin/exercise/weak-digest
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.2399869Z  * [new branch]      main                 -> origin/main
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.2406240Z [command]/usr/bin/git branch --list --remote origin/exercise/weak-digest
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.2436441Z   origin/exercise/weak-digest
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.2445002Z [command]/usr/bin/git rev-parse refs/remotes/origin/exercise/weak-digest
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.2470919Z 3b7cc3743e7ed800f841910160155018067996c9
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.2475869Z ##[endgroup]
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.2476995Z ##[group]Determining the checkout info
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.2477938Z ##[endgroup]
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.2479991Z [command]/usr/bin/git sparse-checkout disable
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.2535060Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.2569780Z ##[group]Checking out the ref
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.2574660Z [command]/usr/bin/git checkout --progress --force -B exercise/weak-digest refs/remotes/origin/exercise/weak-digest
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.2646776Z Switched to a new branch 'exercise/weak-digest'
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.2652913Z branch 'exercise/weak-digest' set up to track 'origin/exercise/weak-digest'.
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.2659565Z ##[endgroup]
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.2704800Z [command]/usr/bin/git log -1 --format=%H
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.2734868Z 3b7cc3743e7ed800f841910160155018067996c9
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.2743826Z ##[group]Removing auth
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.2744608Z Removing SSH command configuration
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.2748019Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.2786772Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.3015751Z Removing HTTP extra header
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.3019226Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.3056172Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.3285180Z Removing includeIf entries pointing to credentials config files
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.3288715Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.3322372Z includeif.gitdir:/home/runner/work/devops-devsecops-demo/devops-devsecops-demo/.git.path
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.3325533Z includeif.gitdir:/home/runner/work/devops-devsecops-demo/devops-devsecops-demo/.git/worktrees/*.path
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.3327994Z includeif.gitdir:/github/workspace/.git.path
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.3329970Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.3335287Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/devops-devsecops-demo/devops-devsecops-demo/.git.path
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.3359036Z /home/runner/work/_temp/git-credentials-6bf51d68-eef2-43af-b5f1-bff75da3a0c6.config
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.3371557Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/devops-devsecops-demo/devops-devsecops-demo/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-6bf51d68\-eef2\-43af\-b5f1\-bff75da3a0c6\.config
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.3410950Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/devops-devsecops-demo/devops-devsecops-demo/.git/worktrees/*.path
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.3473461Z /home/runner/work/_temp/git-credentials-6bf51d68-eef2-43af-b5f1-bff75da3a0c6.config
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.3482789Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/devops-devsecops-demo/devops-devsecops-demo/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-6bf51d68\-eef2\-43af\-b5f1\-bff75da3a0c6\.config
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.3524562Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.3561848Z /github/runner_temp/git-credentials-6bf51d68-eef2-43af-b5f1-bff75da3a0c6.config
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.3616023Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-6bf51d68\-eef2\-43af\-b5f1\-bff75da3a0c6\.config
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.3641863Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.3669771Z /github/runner_temp/git-credentials-6bf51d68-eef2-43af-b5f1-bff75da3a0c6.config
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.3676977Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-6bf51d68\-eef2\-43af\-b5f1\-bff75da3a0c6\.config
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.3714244Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.3940199Z Removing credentials config '/home/runner/work/_temp/git-credentials-6bf51d68-eef2-43af-b5f1-bff75da3a0c6.config'
+SAST, SCA and secret gates	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:06.3949383Z ##[endgroup]
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	﻿2026-10-06T19:24:06.4285723Z ##[group]Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:06.4286609Z with:
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:06.4287085Z   go-version-file: go.mod
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:06.4287605Z   cache: false
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:06.4288084Z   check-latest: false
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:06.4292222Z   token: ***
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:06.4292898Z ##[endgroup]
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:06.5470382Z Setup go version spec 1.27.1
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:06.5479349Z Attempting to download 1.27.1...
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:07.3804475Z matching 1.27.1...
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:07.3830030Z Acquiring 1.27.1 from https://github.com/actions/go-versions/releases/download/1.27.1-33583469715/go-1.27.1-linux-x64.tar.gz
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:08.1647767Z Extracting Go...
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:08.1775142Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/36f0d904-7c11-49df-995b-ae7929297ed2 -f /home/runner/work/_temp/75a9f570-fa58-4b66-8797-d58adbdb162f
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:09.8809355Z Successfully extracted go to /home/runner/work/_temp/36f0d904-7c11-49df-995b-ae7929297ed2
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:09.8810421Z Adding to the cache ...
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:17.1325135Z Successfully cached go to /opt/hostedtoolcache/go/1.27.1/x64
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:17.1333226Z Added go to the path
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:17.1334100Z Successfully set up Go version 1.27.1
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:17.1566170Z go version go1.27.1 linux/amd64
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:17.1566456Z 
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:17.1566850Z ##[group]go env
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3790532Z AR='ar'
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3791061Z CC='gcc'
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3791680Z CGO_CFLAGS='-O2 -g'
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3792147Z CGO_CPPFLAGS=''
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3792817Z CGO_CXXFLAGS='-O2 -g'
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3793324Z CGO_ENABLED='1'
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3793804Z CGO_FFLAGS='-O2 -g'
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3794247Z CGO_LDFLAGS='-O2 -g'
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3794658Z CXX='g++'
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3795037Z GCCGO='gccgo'
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3795435Z GO111MODULE=''
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3795828Z GOAMD64='v1'
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3796231Z GOARCH='amd64'
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3796787Z GOAUTH='netrc'
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3797216Z GOBIN='/home/runner/go/bin'
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3797742Z GOCACHE='/home/runner/.cache/go-build'
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3798265Z GOCACHEPROG=''
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3798685Z GODEBUG=''
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3799121Z GOENV='/home/runner/.config/go/env'
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3799684Z GOEXE=''
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3800099Z GOEXPERIMENT=''
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3801093Z GOFIPS140='off'
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3801486Z GOFLAGS=''
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3802924Z GOGCCFLAGS='-fPIC -m64 -pthread -Wl,--no-gc-sections -fmessage-length=0 -ffile-prefix-map=/tmp/go-build2757265199=/tmp/go-build -gno-record-gcc-switches'
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3804182Z GOHOSTARCH='amd64'
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3804633Z GOHOSTOS='linux'
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3805040Z GOINSECURE=''
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3805735Z GOMOD='/home/runner/work/devops-devsecops-demo/devops-devsecops-demo/go.mod'
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3806545Z GOMODCACHE='/home/runner/go/pkg/mod'
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3807063Z GONOPROXY=''
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3807463Z GONOSUMDB=''
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3807873Z GOOS='linux'
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3808286Z GOPACKAGESDRIVER=''
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3808729Z GOPATH='/home/runner/go'
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3809171Z GOPRIVATE=''
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3809794Z GOPROXY='https://proxy.golang.org,direct'
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3810430Z GOROOT='/opt/hostedtoolcache/go/1.27.1/x64'
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3811013Z GOSUMDB='sum.golang.org'
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3811488Z GOTELEMETRY='local'
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3812009Z GOTELEMETRYDIR='/home/runner/.config/go/telemetry'
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3812838Z GOTMPDIR=''
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3813242Z GOTOOLCHAIN='local'
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3813864Z GOTOOLDIR='/opt/hostedtoolcache/go/1.27.1/x64/pkg/tool/linux_amd64'
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3814551Z GOVCS=''
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3814961Z GOVERSION='go1.27.1'
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3815378Z GOWORK=''
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3815802Z PKG_CONFIG='pkg-config'
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3816103Z 
+SAST, SCA and secret gates	Run actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e	2026-10-06T19:24:18.3816720Z ##[endgroup]
+SAST, SCA and secret gates	Install pinned scanners	﻿2026-10-06T19:24:18.4009336Z ##[group]Run python3 scripts/install-tools.py gosec gitleaks
+SAST, SCA and secret gates	Install pinned scanners	2026-10-06T19:24:18.4009916Z ^[[36;1mpython3 scripts/install-tools.py gosec gitleaks^[[0m
+SAST, SCA and secret gates	Install pinned scanners	2026-10-06T19:24:18.4010303Z ^[[36;1mecho "$PWD/.tools/bin" >> "$GITHUB_PATH"^[[0m
+SAST, SCA and secret gates	Install pinned scanners	2026-10-06T19:24:18.4010764Z ^[[36;1mGOBIN="$PWD/.tools/bin" go install golang.org/x/vuln/cmd/govulncheck@v1.8.0^[[0m
+SAST, SCA and secret gates	Install pinned scanners	2026-10-06T19:24:18.4261394Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+SAST, SCA and secret gates	Install pinned scanners	2026-10-06T19:24:18.4261894Z env:
+SAST, SCA and secret gates	Install pinned scanners	2026-10-06T19:24:18.4262121Z   GOTOOLCHAIN: local
+SAST, SCA and secret gates	Install pinned scanners	2026-10-06T19:24:18.4262578Z ##[endgroup]
+SAST, SCA and secret gates	Install pinned scanners	2026-10-06T19:24:19.5852317Z Installed gosec v2.29.0; SHA256 verified
+SAST, SCA and secret gates	Install pinned scanners	2026-10-06T19:24:20.1663655Z Installed gitleaks v8.30.1; SHA256 verified
+SAST, SCA and secret gates	Install pinned scanners	2026-10-06T19:24:20.2609948Z go: downloading golang.org/x/vuln v1.8.0
+SAST, SCA and secret gates	Install pinned scanners	2026-10-06T19:24:20.5277185Z go: downloading golang.org/x/telemetry v0.0.0-20260908163034-4bcc4b2ee518
+SAST, SCA and secret gates	Install pinned scanners	2026-10-06T19:24:20.5903731Z go: downloading golang.org/x/mod v0.41.0
+SAST, SCA and secret gates	Install pinned scanners	2026-10-06T19:24:20.5963481Z go: downloading golang.org/x/tools v0.50.0
+SAST, SCA and secret gates	Install pinned scanners	2026-10-06T19:24:20.7382074Z go: downloading golang.org/x/sync v0.23.0
+SAST, SCA and secret gates	SAST — reject medium and high findings	﻿2026-10-06T19:24:38.1976260Z ##[group]Run mkdir -p reports
+SAST, SCA and secret gates	SAST — reject medium and high findings	2026-10-06T19:24:38.1976610Z ^[[36;1mmkdir -p reports^[[0m
+SAST, SCA and secret gates	SAST — reject medium and high findings	2026-10-06T19:24:38.1977049Z ^[[36;1mgosec -severity medium -confidence medium -fmt json -out reports/gosec.json ./...^[[0m
+SAST, SCA and secret gates	SAST — reject medium and high findings	2026-10-06T19:24:38.2041659Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+SAST, SCA and secret gates	SAST — reject medium and high findings	2026-10-06T19:24:38.2042033Z env:
+SAST, SCA and secret gates	SAST — reject medium and high findings	2026-10-06T19:24:38.2042242Z   GOTOOLCHAIN: local
+SAST, SCA and secret gates	SAST — reject medium and high findings	2026-10-06T19:24:38.2042808Z ##[endgroup]
+SAST, SCA and secret gates	SAST — reject medium and high findings	2026-10-06T19:24:38.2527608Z [gosec] 2026/10/06 19:24:38 Including rules: default
+SAST, SCA and secret gates	SAST — reject medium and high findings	2026-10-06T19:24:38.2528396Z [gosec] 2026/10/06 19:24:38 Excluding rules: default
+SAST, SCA and secret gates	SAST — reject medium and high findings	2026-10-06T19:24:38.2529006Z [gosec] 2026/10/06 19:24:38 Including analyzers: default
+SAST, SCA and secret gates	SAST — reject medium and high findings	2026-10-06T19:24:38.2529641Z [gosec] 2026/10/06 19:24:38 Excluding analyzers: default
+SAST, SCA and secret gates	SAST — reject medium and high findings	2026-10-06T19:24:38.2543684Z [gosec] 2026/10/06 19:24:38 Import directory: /home/runner/work/devops-devsecops-demo/devops-devsecops-demo/cmd/server
+SAST, SCA and secret gates	SAST — reject medium and high findings	2026-10-06T19:24:38.2545478Z [gosec] 2026/10/06 19:24:38 Import directory: /home/runner/work/devops-devsecops-demo/devops-devsecops-demo/internal/api
+SAST, SCA and secret gates	SAST — reject medium and high findings	2026-10-06T19:24:38.7452964Z [gosec] 2026/10/06 19:24:38 Checking package: api
+SAST, SCA and secret gates	SAST — reject medium and high findings	2026-10-06T19:24:38.7473128Z [gosec] 2026/10/06 19:24:38 Checking file: /home/runner/work/devops-devsecops-demo/devops-devsecops-demo/internal/api/api.go
+SAST, SCA and secret gates	SAST — reject medium and high findings	2026-10-06T19:24:38.7533620Z [gosec] 2026/10/06 19:24:38 Checking file: /home/runner/work/devops-devsecops-demo/devops-devsecops-demo/internal/api/json.go
+SAST, SCA and secret gates	SAST — reject medium and high findings	2026-10-06T19:24:38.7563718Z [gosec] 2026/10/06 19:24:38 Checking file: /home/runner/work/devops-devsecops-demo/devops-devsecops-demo/internal/api/legacy.go
+SAST, SCA and secret gates	SAST — reject medium and high findings	2026-10-06T19:24:38.7684462Z [gosec] 2026/10/06 19:24:38 Checking package: main
+SAST, SCA and secret gates	SAST — reject medium and high findings	2026-10-06T19:24:38.7686939Z [gosec] 2026/10/06 19:24:38 Checking file: /home/runner/work/devops-devsecops-demo/devops-devsecops-demo/cmd/server/main.go
+SAST, SCA and secret gates	SAST — reject medium and high findings	2026-10-06T19:24:38.7740790Z ##[error]Process completed with exit code 1.
+SAST, SCA and secret gates	Save security-reports	﻿2026-10-06T19:24:38.7827285Z ##[group]Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+SAST, SCA and secret gates	Save security-reports	2026-10-06T19:24:38.7827716Z with:
+SAST, SCA and secret gates	Save security-reports	2026-10-06T19:24:38.7827915Z   name: security-reports
+SAST, SCA and secret gates	Save security-reports	2026-10-06T19:24:38.7828148Z   path: reports/
+SAST, SCA and secret gates	Save security-reports	2026-10-06T19:24:38.7828358Z   if-no-files-found: error
+SAST, SCA and secret gates	Save security-reports	2026-10-06T19:24:38.7828587Z   retention-days: 14
+SAST, SCA and secret gates	Save security-reports	2026-10-06T19:24:38.7828803Z   compression-level: 6
+SAST, SCA and secret gates	Save security-reports	2026-10-06T19:24:38.7829016Z   overwrite: false
+SAST, SCA and secret gates	Save security-reports	2026-10-06T19:24:38.7829243Z   include-hidden-files: false
+SAST, SCA and secret gates	Save security-reports	2026-10-06T19:24:38.7829477Z   archive: true
+SAST, SCA and secret gates	Save security-reports	2026-10-06T19:24:38.7829662Z env:
+SAST, SCA and secret gates	Save security-reports	2026-10-06T19:24:38.7829839Z   GOTOOLCHAIN: local
+SAST, SCA and secret gates	Save security-reports	2026-10-06T19:24:38.7830037Z ##[endgroup]
+SAST, SCA and secret gates	Save security-reports	2026-10-06T19:24:38.9334294Z With the provided path, there will be 1 file uploaded
+SAST, SCA and secret gates	Save security-reports	2026-10-06T19:24:38.9338471Z Artifact name is valid!
+SAST, SCA and secret gates	Save security-reports	2026-10-06T19:24:38.9339331Z Root directory input is valid!
+SAST, SCA and secret gates	Save security-reports	2026-10-06T19:24:39.2131873Z Uploading artifact: security-reports.zip
+SAST, SCA and secret gates	Save security-reports	2026-10-06T19:24:39.2182215Z Beginning upload of artifact content to blob storage
+SAST, SCA and secret gates	Save security-reports	2026-10-06T19:24:39.4648800Z Uploaded bytes 601
+SAST, SCA and secret gates	Save security-reports	2026-10-06T19:24:39.5225234Z Finished uploading artifact content to blob storage!
+SAST, SCA and secret gates	Save security-reports	2026-10-06T19:24:39.5226391Z SHA256 digest of uploaded artifact is 7f9d24ab914ee600649e2d003f8884df47091e9040254cef9d4abc53af7d35b4
+SAST, SCA and secret gates	Save security-reports	2026-10-06T19:24:39.5227149Z Finalizing artifact upload
+SAST, SCA and secret gates	Save security-reports	2026-10-06T19:24:39.8837518Z Artifact security-reports successfully finalized. Artifact ID 11437917948
+SAST, SCA and secret gates	Save security-reports	2026-10-06T19:24:39.8839105Z Artifact security-reports has been successfully uploaded! Final size is 601 bytes. Artifact ID is 11437917948
+SAST, SCA and secret gates	Save security-reports	2026-10-06T19:24:39.8842807Z Artifact download URL: https://github.com/vimalyad/devops-devsecops-demo/actions/runs/37518538012/artifacts/11437917948
+SAST, SCA and secret gates	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	﻿2026-10-06T19:24:39.9045212Z Post job cleanup.
+SAST, SCA and secret gates	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:39.9957251Z [command]/usr/bin/git version
+SAST, SCA and secret gates	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:40.0016228Z git version 2.55.0
+SAST, SCA and secret gates	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:40.0059983Z Temporarily overriding HOME='/home/runner/work/_temp/da2d7612-fd50-4ded-80c4-914c1ecc93f1' before making global git config changes
+SAST, SCA and secret gates	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:40.0061389Z Adding repository directory to the temporary git global config as a safe directory
+SAST, SCA and secret gates	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:40.0066721Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/devops-devsecops-demo/devops-devsecops-demo
+SAST, SCA and secret gates	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:40.0101615Z Removing SSH command configuration
+SAST, SCA and secret gates	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:40.0108871Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+SAST, SCA and secret gates	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:40.0146642Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+SAST, SCA and secret gates	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:40.0401562Z Removing HTTP extra header
+SAST, SCA and secret gates	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:40.0408584Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+SAST, SCA and secret gates	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:40.0448974Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+SAST, SCA and secret gates	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:40.0708285Z Removing includeIf entries pointing to credentials config files
+SAST, SCA and secret gates	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:40.0715691Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+SAST, SCA and secret gates	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-06T19:24:40.0755117Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+SAST, SCA and secret gates	Complete job	﻿2026-10-06T19:24:40.1181030Z Cleaning up orphan processes

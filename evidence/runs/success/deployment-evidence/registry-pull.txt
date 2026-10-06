@@ -1,0 +1,4 @@
+sha-7f521b7dfc61f65934565c868cff408fb6f0a489: Pulling from vimalyad/devops-devsecops-demo
+Digest: sha256:b15574d22fbe05e7d801504904dd3b56b20986b3f6c3fde51bce6d0c688eb1af
+Status: Image is up to date for ghcr.io/vimalyad/devops-devsecops-demo:sha-7f521b7dfc61f65934565c868cff408fb6f0a489
+ghcr.io/vimalyad/devops-devsecops-demo:sha-7f521b7dfc61f65934565c868cff408fb6f0a489

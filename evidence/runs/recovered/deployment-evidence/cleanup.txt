@@ -1,0 +1,3 @@
+Deleting cluster "assignment-37519400322-1" ...
+Deleted nodes: ["assignment-37519400322-1-control-plane"]
+Verified: assignment cluster is absent

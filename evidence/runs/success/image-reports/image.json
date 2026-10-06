@@ -1,0 +1,62 @@
+[
+    {
+        "Id": "sha256:b8a1ddb2b1a6d695e90efed85f2031ce42423d0c095e2265070713ab4d2798b3",
+        "RepoTags": [
+            "ghcr.io/vimalyad/devops-devsecops-demo:sha-7f521b7dfc61f65934565c868cff408fb6f0a489"
+        ],
+        "RepoDigests": [],
+        "Parent": "",
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-10-06T19:23:23.463252321Z",
+        "DockerVersion": "",
+        "Author": "",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "65532:65532",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "8080/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": null,
+            "Image": "",
+            "Volumes": null,
+            "WorkingDir": "/",
+            "Entrypoint": [
+                "/server"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "org.opencontainers.image.source": "https://github.com/vimalyad/devops-devsecops-demo"
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 6660256,
+        "GraphDriver": {
+            "Data": {
+                "MergedDir": "/var/lib/docker/overlay2/tnxn0lkra6acir1mheib3oc35/merged",
+                "UpperDir": "/var/lib/docker/overlay2/tnxn0lkra6acir1mheib3oc35/diff",
+                "WorkDir": "/var/lib/docker/overlay2/tnxn0lkra6acir1mheib3oc35/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:229a767709e8332f2cfa20124cf140d06ba67dc0f7c56e5ba51f4d07dee75036"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-10-06T19:23:23.480299157Z"
+        }
+    }
+]
