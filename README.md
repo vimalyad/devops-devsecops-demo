@@ -78,4 +78,23 @@ Test reports, security reports, the container image and deployment evidence are 
 
 [Execution evidence](evidence/README.md) includes successful publication/deployment, a blocked security exercise, the corrected run, retained reports and terminal-only screenshots. Scan results describe the database and code at run time; later database updates can correctly cause a new run to fail.
 
+## Assignment submission map
+
+| Required deliverable | Submitted implementation |
+| --- | --- |
+| Application and unit tests | [HTTP server](cmd/server/main.go), [API and tests](internal/api/) |
+| Dockerfile | [Non-root multi-stage build](Dockerfile) |
+| GitHub Actions and security gates | [Pipeline](.github/workflows/pipeline.yml), [pinned tools](scripts/tools.json), [secret-scanner configuration](.gitleaks.toml) |
+| Registry publication | [Successful GHCR push](evidence/runs/success/image-reports/registry-push.txt) and [deployment-side pull](evidence/runs/success/deployment-evidence/registry-pull.txt) |
+| Kubernetes deployment | [Manifests](k8s/), [deployment script](scripts/deploy.sh), [HTTP CRUD checks](scripts/smoke.py) |
+| Successful execution and screenshots | [Run records and terminal captures](evidence/README.md) |
+
+The assignment specifies scan categories rather than a required application language or registry.
+This Go implementation uses gosec for SAST, govulncheck for SCA, Gitleaks for secret scanning,
+Trivy for the image gate and GHCR for publication. The image that passes scanning is the image
+published and deployed. Kubernetes runs temporarily inside GitHub Actions, with verified cleanup.
+
+Reference example reviewed: [session 17 submission](https://github.com/aryen1101/Learn_DEVOPS/blob/bc73ce6b8663b92b8ac7310418fa5ac7f4c39afd/Class_Assignments/DevSecOps/Readme.md).
+Application code, pipeline reports and screenshots in this repository are from this project's own runs.
+
 The scope follows the [session 17 homework](https://docs.google.com/document/d/1cjXFYf2Thm8cBEN-0C48B-v02cj3jGLd47lcO18prHE/edit). Tool references: [gosec](https://github.com/securego/gosec), [govulncheck](https://pkg.go.dev/golang.org/x/vuln/cmd/govulncheck), [Gitleaks](https://github.com/gitleaks/gitleaks), [Trivy vulnerability scanning](https://trivy.dev/docs/latest/scanner/vulnerability/), and [GHCR publication with Actions](https://docs.github.com/en/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions).
