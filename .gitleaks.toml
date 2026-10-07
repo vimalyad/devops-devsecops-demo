@@ -1,0 +1,3 @@
+title = "Release catalog secret scanning"
+[extend]
+useDefault = true

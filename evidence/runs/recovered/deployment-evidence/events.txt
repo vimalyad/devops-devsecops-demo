@@ -1,0 +1,7 @@
+LAST SEEN   TYPE     REASON              OBJECT                             MESSAGE
+4s          Normal   Scheduled           pod/assignment-7b9c4cdc99-4k7rv    Successfully assigned assignment/assignment-7b9c4cdc99-4k7rv to assignment-37519400322-1-control-plane
+4s          Normal   Pulled              pod/assignment-7b9c4cdc99-4k7rv    Container image "ghcr.io/vimalyad/devops-devsecops-demo:sha-97c7550a351cc46623c589e5a4ca740e7fe26943" already present on machine and can be accessed by the pod
+4s          Normal   Created             pod/assignment-7b9c4cdc99-4k7rv    Container created
+4s          Normal   SuccessfulCreate    replicaset/assignment-7b9c4cdc99   Created pod: assignment-7b9c4cdc99-4k7rv
+4s          Normal   ScalingReplicaSet   deployment/assignment              Scaled up replica set assignment-7b9c4cdc99 from 0 to 1
+3s          Normal   Started             pod/assignment-7b9c4cdc99-4k7rv    Container started

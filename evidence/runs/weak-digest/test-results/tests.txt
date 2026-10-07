@@ -1,0 +1,16 @@
+	github.com/vimalyad/devops-devsecops-demo/cmd/server		coverage: 0.0% of statements
+=== RUN   TestReleaseLifecycle
+--- PASS: TestReleaseLifecycle (0.00s)
+=== RUN   TestValidation
+--- PASS: TestValidation (0.00s)
+=== RUN   TestMalformedJSON
+--- PASS: TestMalformedJSON (0.00s)
+=== RUN   TestMissingRelease
+--- PASS: TestMissingRelease (0.00s)
+=== RUN   TestEmptyListAndHealth
+--- PASS: TestEmptyListAndHealth (0.00s)
+=== RUN   TestConcurrentCreates
+--- PASS: TestConcurrentCreates (0.00s)
+PASS
+coverage: 91.8% of statements
+ok  	github.com/vimalyad/devops-devsecops-demo/internal/api	1.013s	coverage: 91.8% of statements

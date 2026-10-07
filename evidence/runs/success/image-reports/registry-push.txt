@@ -1,0 +1,4 @@
+The push refers to repository [ghcr.io/vimalyad/devops-devsecops-demo]
+229a767709e8: Preparing
+229a767709e8: Pushed
+sha-7f521b7dfc61f65934565c868cff408fb6f0a489: digest: sha256:b15574d22fbe05e7d801504904dd3b56b20986b3f6c3fde51bce6d0c688eb1af size: 528

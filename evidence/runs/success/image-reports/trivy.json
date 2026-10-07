@@ -1,0 +1,139 @@
+{
+  "SchemaVersion": 2,
+  "Trivy": {
+    "Version": "0.75.0"
+  },
+  "ReportID": "01a112ab-c53e-7117-9910-4008c4b3b2b2",
+  "CreatedAt": "2026-10-06T19:23:29.470073514Z",
+  "ArtifactID": "sha256:a8ced928d2e3636539bdc1ac8814ddaf0321269c80f2412b14be3f0e1f466f1f",
+  "ArtifactName": "ghcr.io/vimalyad/devops-devsecops-demo:sha-7f521b7dfc61f65934565c868cff408fb6f0a489",
+  "ArtifactType": "container_image",
+  "Metadata": {
+    "Size": 6662144,
+    "ImageID": "sha256:b8a1ddb2b1a6d695e90efed85f2031ce42423d0c095e2265070713ab4d2798b3",
+    "DiffIDs": [
+      "sha256:229a767709e8332f2cfa20124cf140d06ba67dc0f7c56e5ba51f4d07dee75036"
+    ],
+    "RepoTags": [
+      "ghcr.io/vimalyad/devops-devsecops-demo:sha-7f521b7dfc61f65934565c868cff408fb6f0a489"
+    ],
+    "Reference": "ghcr.io/vimalyad/devops-devsecops-demo:sha-7f521b7dfc61f65934565c868cff408fb6f0a489",
+    "ImageConfig": {
+      "architecture": "amd64",
+      "created": "2026-10-06T19:23:23.463252321Z",
+      "history": [
+        {
+          "created": "2026-10-06T19:23:23Z",
+          "created_by": "LABEL org.opencontainers.image.source=https://github.com/vimalyad/devops-devsecops-demo",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2026-10-06T19:23:23Z",
+          "created_by": "COPY /out/server /server # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2026-10-06T19:23:23Z",
+          "created_by": "USER 65532:65532",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2026-10-06T19:23:23Z",
+          "created_by": "EXPOSE map[8080/tcp:{}]",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2026-10-06T19:23:23Z",
+          "created_by": "ENTRYPOINT [\"/server\"]",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        }
+      ],
+      "os": "linux",
+      "rootfs": {
+        "type": "layers",
+        "diff_ids": [
+          "sha256:229a767709e8332f2cfa20124cf140d06ba67dc0f7c56e5ba51f4d07dee75036"
+        ]
+      },
+      "config": {
+        "Entrypoint": [
+          "/server"
+        ],
+        "Env": [
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+        ],
+        "Labels": {
+          "org.opencontainers.image.source": "https://github.com/vimalyad/devops-devsecops-demo"
+        },
+        "User": "65532:65532",
+        "WorkingDir": "/",
+        "ExposedPorts": {
+          "8080/tcp": {}
+        }
+      }
+    },
+    "Layers": [
+      {
+        "Size": 6662144,
+        "DiffID": "sha256:229a767709e8332f2cfa20124cf140d06ba67dc0f7c56e5ba51f4d07dee75036"
+      }
+    ]
+  },
+  "Results": [
+    {
+      "Target": "server",
+      "Class": "lang-pkgs",
+      "Type": "gobinary",
+      "Packages": [
+        {
+          "ID": "github.com/vimalyad/devops-devsecops-demo",
+          "Name": "github.com/vimalyad/devops-devsecops-demo",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/vimalyad/devops-devsecops-demo",
+            "UID": "7c2973f0cec3e721"
+          },
+          "Relationship": "root",
+          "DependsOn": [
+            "github.com/google/uuid@v1.6.0",
+            "stdlib@v1.27.1"
+          ],
+          "Layer": {
+            "DiffID": "sha256:229a767709e8332f2cfa20124cf140d06ba67dc0f7c56e5ba51f4d07dee75036"
+          },
+          "AnalyzedBy": "gobinary"
+        },
+        {
+          "ID": "stdlib@v1.27.1",
+          "Name": "stdlib",
+          "Identifier": {
+            "PURL": "pkg:golang/stdlib@v1.27.1",
+            "UID": "426391379e91a32d"
+          },
+          "Version": "v1.27.1",
+          "Relationship": "direct",
+          "Layer": {
+            "DiffID": "sha256:229a767709e8332f2cfa20124cf140d06ba67dc0f7c56e5ba51f4d07dee75036"
+          },
+          "AnalyzedBy": "gobinary"
+        },
+        {
+          "ID": "github.com/google/uuid@v1.6.0",
+          "Name": "github.com/google/uuid",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/google/uuid@v1.6.0",
+            "UID": "8768ea09073dc0cc"
+          },
+          "Version": "v1.6.0",
+          "Layer": {
+            "DiffID": "sha256:229a767709e8332f2cfa20124cf140d06ba67dc0f7c56e5ba51f4d07dee75036"
+          },
+          "AnalyzedBy": "gobinary"
+        }
+      ]
+    }
+  ]
+}

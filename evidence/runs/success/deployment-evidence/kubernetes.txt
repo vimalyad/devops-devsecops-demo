@@ -1,0 +1,11 @@
+NAME                              READY   STATUS    RESTARTS   AGE   IP           NODE                                     NOMINATED NODE   READINESS GATES
+pod/assignment-746b676bbf-fcw4x   1/1     Running   0          4s    10.244.0.5   assignment-37518286603-1-control-plane   <none>           <none>
+
+NAME                         READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS   IMAGES                                                                                SELECTOR
+deployment.apps/assignment   1/1     1            1           4s    api          ghcr.io/vimalyad/devops-devsecops-demo:sha-7f521b7dfc61f65934565c868cff408fb6f0a489   app=assignment
+
+NAME                 TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)   AGE   SELECTOR
+service/assignment   ClusterIP   10.96.26.37   <none>        80/TCP    4s    app=assignment
+
+NAME                                              ADDRESSTYPE   PORTS   ENDPOINTS    AGE
+endpointslice.discovery.k8s.io/assignment-2rw47   IPv4          8080    10.244.0.5   4s

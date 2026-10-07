@@ -1,0 +1,5 @@
+.tools/
+build/
+reports/
+coverage.out
+*.test
